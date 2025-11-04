@@ -13,7 +13,27 @@ Puedes comprobar que el dato sea correcto con array_key_exists() y en caso de qu
     <title>Formulario de provincias</title>
   </head>
   <body>
-  <p>Enunciado en el código fuente como comentario</p>
+    <?php
+require_once "datos/provincias.php";
+setlocale(LC_ALL,'spanish_Spain.utf8','es_ES.utf8');
+asort($provincia,SORT_LOCALE_STRING);
+// print "<pre>".print_r($provincia,true)."</pre>\n";
+print <<<FORM1
+<form action="23_recibir_provincia.php" method="GET">
+<select name="prov">
+<option value="0" selected>-- seleccionar provincia --</option>
+
+FORM1;
+foreach($provincia as $codigo => $nombre){
+    print "\t<option value=\"$codigo\">$nombre</option>\n";
+}
+print <<<FORM2
+</select>
+<input type="submit">
+</form>
+FORM2;
+?>
+ <!--  <p>Enunciado en el código fuente como comentario</p>
 <form action="23_recoger_provincia.php" method="GET">
 Seleccionar Provincia:
 <select name="provincia">
@@ -72,5 +92,5 @@ Seleccionar Provincia:
 <option value="50">Zaragoza</option>
 </select>
 <input type="submit" value="Enviar Provincia">
-</form>  </body>
+</form> -->  </body>
 </html>

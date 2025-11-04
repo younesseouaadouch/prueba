@@ -95,6 +95,12 @@ PISTA: El array está en los dos ficheros. Si te resulta complicado escribir los
     <title>Países y capitales</title>
   </head>
   <body>
+    <?php
+    $sorteo = rand(0,count($capital)-1);
+    print "<p>ha salido $sorteo</p>\n";
+    $paises=array_keys($capital);
+    print "<p>Pais $"
+    ?>
   <p>Enunciado en el código fuente como comentario</p>
 <p>Pais 8, corresponde a Bosnia-Herzegovina</p>
 <form action="24_comprobar_capital.php" method="GET">
