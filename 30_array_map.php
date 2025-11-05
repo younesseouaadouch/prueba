@@ -15,7 +15,7 @@
   <body>
     <?php
     require_once "datos/capitales.php";
-    require_once "datos/alumnos.php";
+    require_once "datos/alumno.php";
     // print "<pre>".print_r($alumnos,true)."</pre>\n";
     $resultado=array_map('mb_strtoupper',$alumnos);
     print "<pre>".print_r($resultado,true)."</pre>\n";
@@ -64,7 +64,13 @@ function suma($a,$b){
 
 $suma=array_map('suma',range(1,20),range(1,200,10));
 print "<pre>".print_r($suma,true)."</pre>\n";
+/* tabla de capitales sin bucles */
 
+function fila($p,$c){
+return "<tr><td>$p</td><td>$c</td></tr>";
+}
+$las_filas = array_map('fila',array_keys($capital),$capital);
+print "<pre>".print_r(array_map('htmlentities',$las_filas),true)."</pre>";
     ?>
   </body>
 </html>
