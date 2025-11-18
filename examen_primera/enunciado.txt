@@ -1,0 +1,79 @@
+Se te proporciona un array de empresas.
+Sería conveniente que hicieras algún print_r para tener clara la estructura del array.
+El ejercicio se corregirá en el servidor.
+
+Se pide:
+
+********************
+listado_completo.php
+********************
+
+Haz un listado (gigantesco) ordenado por categoría y número de trabajadores. Si coincide el número de trabajadores ordena 
+por localidad y luego por nombre de empresa. 
+
+Sería conveniente hacerte una función que reciba un array de empresas y genere un listado. Te será útil más adelante.
+
+=======================================================================================================================
+Cuando funcione, sube los ficheros correspondientes a /public_html/examen_primera/ejercicio1 de tu cuenta del servidor.
+========================================================================================================================
+
+**********************
+seleccionar_sector.php
+**********************
+
+Haz un desplegable (drop down) que te permita seleccionar una categoría para acceder a las empresas de esa categoría ordenadas 
+alfabéticamente. 
+
+Se recomienda usar array_column y array_unique para generar el desplegable y array_filter para seleccionar las 
+que sean de esa categoría. Para filtrar, deberías investigar el uso de la palabra reservada "use" con funciones.
+
+Puedes hacer un formulario que llame al mismo fichero o a otro.
+=======================================================================================================================
+Cuando funcione, sube los ficheros correspondientes a /public_html/examen_primera/ejercicio2 de tu cuenta del servidor.
+========================================================================================================================
+
+*****************************************
+json_por_localidad.php?poblacion=BILBAO
+*****************************************
+
+Haz un fichero similar al que hicimos en clase para hacer un csv pero que haga un JSON. 
+Recibirá un nombre de población y devolverá el JSON con las empresas de esa población. 
+De nuevo sería deseable usar array_filter. 
+
+Debe trabajar en UTF-8. 
+
+Cuidado con el filtro. Hay empresas en Bilbao y en BILBAO
+
+=======================================================================================================================
+Cuando funcione, sube los ficheros correspondientes a /public_html/examen_primera/ejercicio3 de tu cuenta del servidor.
+========================================================================================================================
+
+EJERCICIO EXTRA:
+Los tres ejercicios anteriores suman 10 puntos. Como todos nos confundimos en alguna cosilla, este último ejercicio te da opción 
+a recuperar esos puntos que puedes haber perdido.
+
+******************************
+listado_paginado.php?pagina=4
+******************************
+
+Investiga el uso de array_slice para modificar el ejercicio1 y hacer un listado paginado. 
+Incluye dos botones "anterior" "siguiente" que llamen al mismo fichero pero con distintos parámetros (puede ser simplemente con 
+la página, por ejemplo)
+
+=======================================================================================================================
+Cuando funcione, sube los ficheros correspondientes a /public_html/examen_primera/ejercicio4 de tu cuenta del servidor.
+========================================================================================================================
+
+-----------------------------------------------------------------------------
+Mejora el ejercicio del csv para que se abra con excell y se vean los cÃ³digos bien.
+
+El problema del csv en excel es que espera separador ; y ANSI europeo occidentar
+
+-------------------------------------------------------------------------
+
+Para no poner las localidades en la URL, hazte un Ã­ndice aparte llamado listar por localidad en el que aparezca un enlace por cada localidad. Que llame a json_por_localidad (o csv_por_localidad) usando la funciÃ³n urlencode para que los enlaces sean ASCII.
+
+MejÃ³ralo escribiendo detrÃ¡s de cada localidad el nÃºmero de empresas
+
+------------------------------------------------------------------------
+En la misma lÃ­nea, puedes modificar el segundo ejercicio para que llame desde un Ã­ndice a cada sector. De nuevo usa urlencode
