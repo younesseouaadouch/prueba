@@ -1,5 +1,5 @@
 <?php
-require_once '../quienesquien.php';
+require_once '../datos/quienesquien.php';
 function tabla_de_empresas($dato){
     //$dato es un array de empresas
     print "<table>\n";

@@ -1,4 +1,5 @@
 <?php
 require_once "funciones.php";
-tabla_total();
+tabla_autonomia();
+tabla_provincia();
 ?>
