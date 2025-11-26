@@ -1,0 +1,19 @@
+
+RewriteBase /younesse/prueba/
+#Lo anterior solo era necesario en linux. Ahora no
+#Arrancamos el motor de reescritura
+RewriteEngine on
+#Si escriben hola sin palo final, fuerzo que su navegador se lo añada
+RewriteRule ^/?hola$  ./hola/ [NC,R=301]
+# Opcione entre corchetes
+# NC............No Case, es decir, no distingue mayúsculas y minúsculas
+# R=301.........Se permite al cliente ver la URL "real" y se le modifica en su barra de direcciones 
+#Si escriben hola, quiero que llame a saludar.php
+RewriteRule ^/?hola/?$  ./principal.php [NC,L]
+# L............Last. ¡Si se aplican la regla, nos aplican las siguientes reglas de
+RewriteRule ^/?hola/([a-z0-9\-]+)/?$  ./principal.php?ayto=$1 [NC,L]
+#supongamos que queremos reescribir el ejercicio de la deuda con URL con codigos
+RewriteRule ^/?deuda/?$  ./principal.php [NC,L]
+RewriteRule ^/?deuda/(\d+)/?$  ./principal.php?com=$1 [NC,L]
+RewriteRule ^/?deuda/(\d+)/(\d+)$  ./principal.php?com=$1&prov=$2 [NC,L]
+RewriteRule ^/?deuda/(\d+)/(\d+)/(\d+)$  ./principal.php?com=$1&prov=$2&ayto=$3 [NC,L]
