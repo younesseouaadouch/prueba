@@ -1,5 +1,5 @@
 <?php
-require_once './datos/deuda_codigos.php';
+require_once './deuda_codigos.php';
 function pagina_principal(){
     menu_comunidades();
     tabla_comunidades();
