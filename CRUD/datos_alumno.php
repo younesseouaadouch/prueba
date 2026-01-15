@@ -6,5 +6,5 @@ require_once 'funciones.php';
 
 // Se supone que me llega un parámetro alumno en el POST
 
-borrar_alumno($_POST['alumno']);
+mostrar_alumno($_GET['alumno']);
 ?>

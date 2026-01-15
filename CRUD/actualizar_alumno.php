@@ -1,4 +1,5 @@
 <?php
-require_once '../funciones.php';
-print "<p>".print_r($_POST, true)."</p>\n";
+require_once 'funciones.php';
+print "<pre>".print_r($_POST,true)."</pre>\n";
+modificar_alumno($_POST);
 ?>
