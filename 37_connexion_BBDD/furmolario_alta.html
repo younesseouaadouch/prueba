@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de alta</title>
+	<style>
+label{
+		display: inline-block;
+		width:5em;
+		text-align: right;
+		padding-right: .5em;
+		}  
+	</style>
+	<!--
+    <link rel="stylesheet" href="style.css">
+	-->
+  </head>
+  <body>
+  <form action="nuevo_usuario.php" method="POST">
+  <label>Nombre:</label><input type="text" name="nombre"><br>
+  <label>Apellido1:</label><input type="text" name="ape1"><br>
+  <label>Apellido2:</label><input type="text" name="ape2"><br>
+  <label>Nick:</label><input type="text" name="nick"><br>
+  <label>Password:</label><input type="text" name="clave"><br>
+  <input type="submit" value="Me Apunto">
+  </form>
+  </body>
+</html>
